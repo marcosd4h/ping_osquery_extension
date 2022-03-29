@@ -6,7 +6,7 @@ The project implements a new osquery virtual table called `ping`  that allows op
 The virtual table is delivered through an Osquery extension using the Osquery C++ SDK.
 
 ### Technical Overview
-The extension was created around a custom-made library called `ping_helper_lib`. This library is in charge of abstracting the extension from the internals of the ICMP ping process while also providing a synchronous interface that can be used to execute the ICMP ping process.
+The extension was created around a custom-made cross-platform library called `ping_helper_lib`. This library is in charge of abstracting the extension from the internals of the ICMP ping process while also providing a synchronous interface that can be used to execute the ICMP ping process.
 The `ping_helper_lib` library uses [Boost.Asio](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio.html)  library to send and receive the ICMP Echo Request/Reply packets asynchronously. The `ping_helper_lib` relies on C++ Lamba functions to handle the different scenarios found in the process of ICMP-pinging other hosts. The idea of abstracting the core functionality through a static library makes this logic easy to consume and unit test
 
 ### Result data
