@@ -3,7 +3,7 @@ A small osquery extension to ping hosts through ICMP Echo Request/Reply packets
 
 ### Description
 The project implements a new osquery virtual table called `ping`  that allows operators to ping hosts and receives a digested response.
-The virtual table is delivered through an Osquery extension using the Osquery C++ SDK.
+The virtual table is delivered through an Osquery extension using the Osquery C++ SDK. Demo video is available [here](https://www.youtube.com/watch?v=N0dIFfnaVW0)
 
 ### Technical Overview
 The extension was created around a custom-made cross-platform library called `ping_helper_lib`. This library is in charge of abstracting the extension from the internals of the ICMP ping process while also providing a synchronous interface that can be used to execute the ICMP ping process.
